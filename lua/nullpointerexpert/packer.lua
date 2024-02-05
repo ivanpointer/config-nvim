@@ -40,8 +40,12 @@ return require('packer').startup(function(use)
         end,
     }
 
-  -- Harpoon (navigation)
+  -- navigation
   use('theprimeagen/harpoon')
+  use({
+    'stevearc/oil.nvim',
+    requires = { 'nvim-tree/nvim-web-devicons' }
+  })
 
   -- Undotree
   use('mbbill/undotree')
@@ -74,10 +78,47 @@ use {
   }
 }
 
+  use {
+    'ray-x/guihua.lua',
+  }
+
+  use {
+    'mfussenegger/nvim-dap',
+    'theHamsta/nvim-dap-virtual-text'
+  }
+
   -- go
   use {
     'ray-x/go.nvim',
-    'ray-x/guihua.lua'
+    'leoluz/nvim-dap-go',
+    ft = "go",
+    requires = {'mfussenegger/nvim-dap'},
+    config = function(_, opts)
+      require("dap-go").setup(opts)
+    end
   }
 
+  use { "rcarriga/nvim-dap-ui", requires = {"mfussenegger/nvim-dap"} }
+
+-- utilities
+use {
+  "folke/which-key.nvim",
+  config = function()
+    vim.o.timeout = true
+    vim.o.timeoutlen = 300
+    require("which-key").setup {
+      -- your configuration comes here
+      -- or leave it empty to use the default settings
+      -- refer to the configuration section below
+    }
+  end
+}
+
+-- tmux integration
+ use {
+    'christoomey/vim-tmux-navigator'
+ }
+
 end)
+
+
