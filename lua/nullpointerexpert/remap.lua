@@ -24,6 +24,5 @@ vim.keymap.set("n", "<leader>j", "<cmd>lprev<CR>zz")
 
 -- Toggle relative numbering
 vim.keymap.set("n", "<leader>en", function()
-    vim.opt.relativenumber = not(vim.opt.relativenumber:get())
+    vim.opt.relativenumber = not (vim.opt.relativenumber:get())
 end)
-

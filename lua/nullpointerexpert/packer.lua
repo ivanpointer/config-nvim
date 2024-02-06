@@ -10,7 +10,9 @@ return require('packer').startup(function(use)
     use {
         'nvim-telescope/telescope.nvim', tag = '0.1.5',
         -- or                          , branch = '0.1.x',
-        requires = { { 'nvim-lua/plenary.nvim' } }
+        requires = {
+            { 'nvim-lua/plenary.nvim' },
+        }
     }
 
     -- find more at: https://dotfyle.com/neovim/colorscheme/top
@@ -71,10 +73,7 @@ return require('packer').startup(function(use)
     }
 
     use {
-        'preservim/tagbar',
-        requires = {
-            { 'universal-ctags/ctags' }
-        }
+        'stevearc/aerial.nvim'
     }
 
     -- lsp-zero
