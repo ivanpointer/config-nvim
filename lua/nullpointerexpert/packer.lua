@@ -70,6 +70,13 @@ return require('packer').startup(function(use)
         },
     }
 
+    use {
+        'preservim/tagbar',
+        requires = {
+            { 'universal-ctags/ctags' }
+        }
+    }
+
     -- lsp-zero
     use {
         'VonHeikemen/lsp-zero.nvim',
