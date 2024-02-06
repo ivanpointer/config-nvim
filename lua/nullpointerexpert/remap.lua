@@ -1,6 +1,9 @@
 vim.g.mapleader = " "
 -- vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 
+-- buffers
+vim.keymap.set("n", "<leader>q", "<cmd>bd<CR>")
+
 -- Q is the worst place in the universe, block it out
 vim.keymap.set("n", "Q", "<nop>")
 
@@ -26,3 +29,7 @@ vim.keymap.set("n", "<leader>j", "<cmd>lprev<CR>zz")
 vim.keymap.set("n", "<leader>en", function()
     vim.opt.relativenumber = not (vim.opt.relativenumber:get())
 end)
+
+-- clear search text
+vim.keymap.set("n", "<leader>cl", "<cmd>noh<CR>")
+

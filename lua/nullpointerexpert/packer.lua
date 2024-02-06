@@ -76,6 +76,9 @@ return require('packer').startup(function(use)
         'stevearc/aerial.nvim'
     }
 
+    -- using packer.nvim
+    use { 'akinsho/bufferline.nvim', tag = "*", requires = 'nvim-tree/nvim-web-devicons' }
+
     -- lsp-zero
     use {
         'VonHeikemen/lsp-zero.nvim',
