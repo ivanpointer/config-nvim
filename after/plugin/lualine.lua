@@ -4,7 +4,7 @@ require('lualine').setup {
     theme = 'auto',
     component_separators = { left = '', right = ''},
     section_separators = { left = '', right = ''},
-    disabled_filetypes = { 'packer', 'aerial' }, --'NvimTree`
+    disabled_filetypes = { 'packer' }, --'NvimTree`, 'aerial'
     ignore_focus = {},
     always_divide_middle = true,
     globalstatus = false,
@@ -33,5 +33,5 @@ require('lualine').setup {
   tabline = {},
   winbar = {},
   inactive_winbar = {},
-  extensions = { 'nvim-tree' }
+  extensions = { 'nvim-tree', 'aerial' }
 }
