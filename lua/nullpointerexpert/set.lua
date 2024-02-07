@@ -5,13 +5,15 @@ vim.opt.smartindent = true
 vim.opt.wrap = false
 
 vim.opt.incsearch = true
+vim.opt.hlsearch = false
 vim.opt.termguicolors = true
 
 vim.opt.scrolloff = 8
+
 vim.opt.signcolumn = "yes"
+vim.opt.colorcolumn = "120"
 
 vim.opt.updatetime = 50
-vim.opt.colorcolumn = "120"
 
 vim.opt.tabstop = 4
 vim.opt.softtabstop = 4
